@@ -13,6 +13,7 @@ I came to AI from Linux administration (RHCE) and from running my own visa consu
 | Area | What I built |
 |---|---|
 | **Agents** | An orchestrator agent runs 6 departments: sales, marketing, content, finance, support and intelligence. Risky actions wait in an approval queue for a human. |
+| **RAG** | Answers from each business's own documents. Hybrid retrieval: pgvector similarity plus PostgreSQL full-text search, merged with Reciprocal Rank Fusion, then a reranker with fallbacks if the reranking service is down. |
 | **Evals** | A quality gate that runs before a deploy. It scores the production model on 11 golden sets (48 test items) and fails if any task scores below the floor. I do not deploy until it passes. |
 | **Reliability** | An LLM gateway with failover across 4 providers, a circuit breaker and usage tracking. It kept serving through a real provider quota outage. |
 | **API integrations** | An adapter layer that puts outside APIs behind one interface: 57 adapter files in 15 categories. In live use: WhatsApp Cloud API, LLM providers, Cloudflare R2. |
@@ -46,7 +47,7 @@ Where it stands today: 7 tenants, all my own and family businesses. No paying cu
 ## Skills
 
 Python · FastAPI · PostgreSQL (row-level security) · Redis · Celery · Docker · CI/CD · Linux
-LLM APIs (Anthropic, OpenAI-compatible, Gemini, Groq) · agents and orchestration · eval gates · model routing and failover · WhatsApp Cloud API · MCP (daily use)
+LLM APIs (Anthropic, OpenAI-compatible, Gemini, Groq) · agents and orchestration · RAG (hybrid search, reranking, pgvector) · eval gates · model routing and failover · WhatsApp Cloud API · MCP (daily use)
 Languages: English, Telugu
 
 ## Contact
