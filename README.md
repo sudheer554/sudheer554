@@ -26,6 +26,8 @@ Where it stands today: 7 tenants, all my own and family businesses. No paying cu
 
 ## Public code
 
+[evalgate](https://github.com/sudheer554/evalgate) fails the build when LLM quality drops. Golden sets, a score floor and model failover, usable as a CLI, an MCP server or a GitHub Action. I extracted it from the eval gate I run in production. Its first real run failed, and the bug was in the eval itself, not the model: the README tells that story.
+
 [claude-code-project-template](https://github.com/sudheer554/claude-code-project-template) is a starter for projects built with Claude Code. It has a small `CLAUDE.md`, skills, agents, tested safety hooks and an optional Python/FastAPI pack. It comes from how I set up my own projects: keep the always-loaded context small, and test the guard rails instead of trusting them.
 
 ## How I work
